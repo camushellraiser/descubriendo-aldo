@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#121b25">
+  <meta name="description" content="Una forma diferente de conocer a Aldo. Curiosidades, historias y pequeñas sorpresas.">
+  <meta property="og:title" content="Descubriendo a Aldo — Hay más de mí de lo que parece">
+  <meta property="og:description" content="Un pequeño universo de cosas que quizá no sabías de mí.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/aldo-ilustrado.webp">
+  <title>Descubriendo a Aldo ✦</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="Descubriendo a Aldo, inicio">
+      <span class="brand-mark">AL</span><span class="brand-name">DESCUBRIENDO <strong>A ALDO</strong></span>
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="#explorar">Explorar</a>
+      <a href="#final">Una última cosa</a>
+    </nav>
+    <button class="soundless" id="randomTop" type="button" aria-label="Descubrir algo al azar" title="Sorpréndeme">✦ <span>Sorpréndeme</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> UNA PEQUEÑA EXPERIENCIA PERSONAL <span class="line"></span> 001</div>
+        <p class="chapter-label">ALDO, SIN FILTROS DE CURRÍCULUM</p>
+        <h1 id="heroTitle">Hay más de mí<br>de lo que <em>parece.</em></h1>
+        <p class="hero-description">Quizá ya sabes algunas cosas sobre mí. Pero apostaría a que hay otras que todavía no. Aquí puedes descubrirlas a tu ritmo, una curiosidad a la vez.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#explorar">Empezar a descubrir <span aria-hidden="true">↗</span></a>
+          <button class="button button-text" id="randomHero" type="button">O sorpréndeme <span aria-hidden="true">✦</span></button>
+        </div>
+        <div class="hero-footnote"><span class="asterisk">✳</span> Advertencia: contiene datos curiosos, manías y una cantidad cuestionable de matemáticas.</div>
+      </div>
+      <div class="portrait-shell">
+        <div class="portrait-backdrop" aria-hidden="true"></div>
+        <div class="portrait-card">
+          <img class="portrait" src="assets/aldo-ilustrado.webp" alt="Versión ilustrada de Aldo con sombrero vaquero beige, ropa negra y botas" fetchpriority="high">
+          <div class="portrait-vignette" aria-hidden="true"></div>
+          <span class="portrait-caption">PERSONA REAL, VERSIÓN ILUSTRADA</span>
+          <button type="button" class="hotspot hotspot-hat" data-open="vaquero" aria-label="Descubre mi lado vaquero"><span class="pulse"></span> Mi estilo <span aria-hidden="true">↗</span></button>
+          <button type="button" class="hotspot hotspot-heart" data-open="lealtad" aria-label="Descubre qué valoro en las personas"><span class="pulse"></span> Lo que valoro <span aria-hidden="true">↗</span></button>
+          <button type="button" class="hotspot hotspot-brain" data-open="creativo" aria-label="Descubre mi lado creativo"><span class="pulse"></span> Mi cabeza <span aria-hidden="true">↗</span></button>
+        </div>
+        <div class="portrait-corner" aria-hidden="true">ALDO / 01</div>
+      </div>
+      <a href="#explorar" class="scroll-hint" aria-label="Bajar a los descubrimientos"><span class="scroll-line"></span> DESLIZA PARA EXPLORAR</a>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="marquee-track">CURIOSO ✦ SOÑADOR ✦ ANALÍTICO ✦ CREATIVO ✦ LEAL ✦ UN POCO MANIÁTICO CON LOS DETALLES ✦ CURIOSO ✦ SOÑADOR ✦ ANALÍTICO ✦ CREATIVO ✦ LEAL ✦ UN POCO MANIÁTICO CON LOS DETALLES ✦</div></div>
+
+    <section class="explore" id="explorar" aria-labelledby="exploreTitle">
+      <div class="section-head">
+        <div class="section-intro"><p class="overline">CAPÍTULO I · ELIGE TU PROPIA RUTA</p><h2 id="exploreTitle">¿Por dónde quieres <em>empezar?</em></h2><p>Elige lo que te dé curiosidad. No hay orden, examen final ni respuestas equivocadas. Bueno… salvo en las matemáticas.</p></div>
+        <div class="progress-card" aria-live="polite"><span>EXPLORACIÓN PERSONAL</span><strong><b id="seenCount">0</b> <small>/ <span id="totalCount">12</span></small></strong><div class="progress-rail"><div class="progress-fill" id="progressFill"></div></div><small>descubrimientos abiertos</small></div>
+      </div>
+      <div class="discoveries" id="discoveryGrid" aria-label="Descubrimientos para abrir"></div>
+      <div class="center-actions"><button class="button button-outline" id="randomGrid" type="button">No sé cuál elegir. Sorpréndeme <span aria-hidden="true">✦</span></button></div>
+    </section>
+
+    <section class="interlude" aria-label="Una reflexión sobre conocerme">
+      <div class="interlude-stars" aria-hidden="true">✶ &nbsp; ✦ &nbsp; ✧</div>
+      <p>No soy únicamente lo que hago, lo que me gusta o lo que sé. También soy todas esas pequeñas cosas que no siempre <em>se notan a primera vista.</em></p>
+      <span>— ALDO</span>
+    </section>
+
+    <section class="last-note" id="final" aria-labelledby="finalTitle">
+      <div class="note-art" aria-hidden="true"><span>✉</span><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div></div>
+      <div class="note-copy"><p class="overline">CAPÍTULO II · POR AHORA…</p><h2 id="finalTitle">Y esto es solo <em>el comienzo.</em></h2><p>Me gustan las conversaciones que hacen descubrir cosas nuevas sobre alguien. Esta es una pequeña invitación a eso: conocerme más allá de lo evidente.</p><button class="button button-primary" id="randomLast" type="button">Una curiosidad más <span aria-hidden="true">↗</span></button></div>
+    </section>
+  </main>
+
+  <footer class="footer"><span class="footer-sign"><b>AL</b> <span>Developed by <strong>Aldo Lizares</strong></span></span><span>HECHO CON CURIOSIDAD, IDEAS Y UN POCO DE CAFÉ.</span><a href="#inicio" aria-label="Volver al inicio">VOLVER ARRIBA ↑</a></footer>
+
+  <div class="modal-wrap" id="modalWrap" hidden>
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <div class="modal-handle" aria-hidden="true"></div>
+      <div class="modal-top"><span class="modal-index" id="modalIndex">DESCUBRIMIENTO 01</span><button type="button" class="modal-close" id="modalClose" aria-label="Cerrar descubrimiento">✕</button></div>
+      <div class="modal-content" id="modalContent"></div>
+      <div class="modal-bottom"><span id="modalProgressLabel"></span><button class="next-button" id="nextDiscovery" type="button">Descubrir otro <span aria-hidden="true">→</span></button></div>
+    </section>
+  </div>
+</body>
+</html>
